@@ -60,6 +60,11 @@ createApp({
     };
   },
   methods:{
+
+    
+
+
+
     deleteProduct(indexRemove){
         console.log(indexRemove);
         this.prodotti.splice(indexRemove,1)

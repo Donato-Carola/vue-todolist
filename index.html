@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-   <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <div id="app">
-         <main>
-            
-   <section>
+      <main>
+        <section>
           <h1>lista della spesa</h1>
 
+          <input
+            type="text"
+            name="addProduct"
+            id="addProduct"
+            placeholder="Inserisci nuovo prodotto da comprare"
+          />
 
-            <ul class="listTodo">
-                <li class="elemList" v-for="(item,index) in prodotti" :class="(item.done === true) ? 'barra' : '' ">
-                    {{item.text}}
-                    <span>
-                        <i class="fa-regular fa-rectangle-xmark" @click="deleteProduct(index)"></i>
-                    </span>
-
-                </li>
-            </ul>
-   </section>
-
-
-         </main>
-
-
-
-
-
-
-
-
-
-
+          <ul class="listTodo">
+            <li
+              class="elemList"
+              v-for="(item,index) in prodotti"
+              :class="(item.done === true) ? 'barra' : '' "
+            >
+              {{item.text}}
+              <span>
+                <i
+                  class="fa-regular fa-rectangle-xmark"
+                  @click="deleteProduct(index)"
+                ></i>
+              </span>
+            </li>
+          </ul>
+        </section>
+      </main>
     </div>
 
-    
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
