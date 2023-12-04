@@ -44,14 +44,25 @@ createApp({
           text: "Birra",
           done: true,
         },
+        {
+            text: "Patatine",
+            done: true,
+          },
+          {
+            text: "Cioccolato",
+            done: false,
+          },
+          {
+            text: "Salsicce",
+            done: true,
+          },
       ],
     };
   },
   methods:{
-   /* deleteProducts(){
-        if(this.prodotti.done === true){
-            
-        }
-    }*/
+    deleteProduct(indexRemove){
+        console.log(indexRemove);
+        this.prodotti.splice(indexRemove,1)
+    }
   }
 }).mount("#app");

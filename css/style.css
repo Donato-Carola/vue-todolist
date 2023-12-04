@@ -23,7 +23,7 @@ ul{
 }
 
 li{
-    font-size: large;
+    font-size: xx-large;
     width: 60%;
     padding: 0.5rem 0;
     padding-left: 10rem;
@@ -32,6 +32,12 @@ li{
     
 }
 
+
+
 li.barra{
     text-decoration: line-through;
+}
+
+li.elemList>span>i:hover{
+    color: red;
 }
