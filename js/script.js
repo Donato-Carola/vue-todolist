@@ -12,20 +12,46 @@ Bonus:
 1- oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
 2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)*/
 
+/*["Pane", "Latte", "Uova", "Frutta", "Verdura","Birra", "Patatine", "Cioccolato", "Salsicce"]*/
 
-
-
-
-
-
-
-
-const { createApp } = Vue
+const { createApp } = Vue;
 
 createApp({
   data() {
     return {
-      message: 'Hello Vue!'
+      prodotti: [
+        {
+          text: "Pane",
+          done: true,
+        },
+        {
+          text: "Latte",
+          done: true,
+        },
+        {
+          text: "Uova",
+          done: false,
+        },
+        {
+          text: "Frutta",
+          done: true,
+        },
+        {
+          text: "Verdura",
+          done: false,
+        },
+        {
+          text: "Birra",
+          done: true,
+        },
+      ],
+    };
+  },
+  methods:{
+    deleteProducts(){
+        if(this.prodotti.done === true){
+            
+        }
     }
   }
-}).mount('#app')
+}).mount("#app");
