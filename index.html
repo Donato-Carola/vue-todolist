@@ -18,7 +18,7 @@
 
 
             <ul class="listTodo">
-                <li class="elemList" v-for="item in prodotti" >
+                <li class="elemList" v-for="item in prodotti" :class="(item.done === true) ? 'barra' : '' ">
                     {{item.text}}
                     <span>
                         <i class="fa-regular fa-rectangle-xmark"></i>

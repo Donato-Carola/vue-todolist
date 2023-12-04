@@ -48,10 +48,10 @@ createApp({
     };
   },
   methods:{
-    deleteProducts(){
+   /* deleteProducts(){
         if(this.prodotti.done === true){
             
         }
-    }
+    }*/
   }
 }).mount("#app");

@@ -31,3 +31,7 @@ li{
     justify-content: space-between;
     
 }
+
+li.barra{
+    text-decoration: line-through;
+}
