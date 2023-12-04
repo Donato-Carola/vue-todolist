@@ -32,6 +32,7 @@
               class="elemList"
               v-for="(item,index) in prodotti"
               :class="(item.done === true) ? 'barra' : '' "
+              @click="invertBarra(item)"
             >
               {{item.text}}
               <span>

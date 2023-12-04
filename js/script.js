@@ -96,6 +96,15 @@ createApp({
     deleteProduct(indexRemove){
         console.log(indexRemove);
         this.prodotti.splice(indexRemove,1)
-    }
+    },
+
+ invertBarra(prod){
+    prod.done = !prod.done;
+  }
+
+
   },
+
+
+ 
 }).mount("#app");
