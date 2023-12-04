@@ -58,7 +58,10 @@ createApp({
             done: true,
           },
       ],
-
+      nuovoProdotto: {
+        text: '',
+        done: false,
+      },
    
     };
   },
@@ -68,7 +71,26 @@ createApp({
 
   methods:{
 
-   
+    deleteProduct(indexRemove){
+      console.log(indexRemove);
+      this.prodotti.splice(indexRemove,1)
+  },
+
+    aggiungiProdotto() {
+      // Controllo se il campo di input è vuoto
+      if (this.nuovoProdotto.text.trim() === '') {
+        return;
+      }
+
+      // Assegna un nuovo ID univoco al todo
+      const nuovoTodoConId = { ...this.nuovoProdotto, id: Date.now() };
+
+      // Aggiungi il nuovo todo alla lista
+      this. prodotti = [...this. prodotti, nuovoTodoConId];
+
+      // Resetta il campo di input
+      this.nuovoProdotto.text = '';
+    },
 
 
     deleteProduct(indexRemove){
