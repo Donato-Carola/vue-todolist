@@ -14,18 +14,24 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <div id="app">
-      <main>
-        <section>
-          <h1>lista della spesa</h1>
 
+      <main>
+
+        <section>
+
+          <h1>lista della spesa</h1>
+      <div>
           <input
             type="text"
             name="addProduct"
             id="addProduct"
             placeholder="Inserisci nuovo prodotto da comprare"
           />
-
-          <ul class="listTodo">
+          <button>
+                salva nella lista
+          </button>
+</div>
+          <ul class="listTodo" v-if="prodotti.length > 0">
             <li
               class="elemList"
               v-for="(item,index) in prodotti"
@@ -40,8 +46,14 @@
               </span>
             </li>
           </ul>
+          <p class="addList" v-else>
+            Inserisci la tua bellissima lista della spesa! Ricordati che stai a dieta , Ciao
+          </p>
+
         </section>
+
       </main>
+
     </div>
 
     <script src="js/script.js"></script>

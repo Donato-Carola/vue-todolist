@@ -20,6 +20,7 @@ createApp({
   data() {
     return {
       prodotti: [
+        
         {
           text: "Pane",
           done: true,
@@ -57,17 +58,22 @@ createApp({
             done: true,
           },
       ],
+
+   
     };
   },
+
+  
+
+
   methods:{
 
-    
-
+   
 
 
     deleteProduct(indexRemove){
         console.log(indexRemove);
         this.prodotti.splice(indexRemove,1)
     }
-  }
+  },
 }).mount("#app");
