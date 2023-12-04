@@ -82,11 +82,11 @@ createApp({
         return;
       }
 
-      // Assegna un nuovo ID univoco al todo
-      const nuovoTodoConId = { ...this.nuovoProdotto, id: Date.now() };
+      
+      const nuovoProdotto= { ...this.nuovoProdotto};
 
-      // Aggiungi il nuovo todo alla lista
-      this. prodotti = [...this. prodotti, nuovoTodoConId];
+      // Aggiungi il nuovo prodotto alla lista
+      this. prodotti = [...this. prodotti, nuovoProdotto];
 
       // Resetta il campo di input
       this.nuovoProdotto.text = '';
